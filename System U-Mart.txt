@@ -1,0 +1,52 @@
+#include<iostream>
+#include<string>
+#include<cmath>
+using namespace std;
+int main(){
+    int item;
+    float pri;
+    float tdis;
+    float dis;
+    float  pribdis;
+    float priadis;
+    int cash;
+    float change;
+    float gst=5;
+    int tgst;
+    cout<<"------- Welcome to U-MART------"<<endl;
+    cout<<endl;
+    cout<<"       ---[ RECEIPT ]---           "<<endl;
+    cout<<endl;
+    cout<<"(For Dealer)"<<endl;
+    cout<<"Enter the no.of items        :  ";
+    cin>>item;
+    cout<<"Enter the price              :  ";
+    cin>>pri;
+    cout<<"Enter the discount %         :  ";
+    cin>>dis;
+    cout<<"------------------------------"<<endl;
+    
+    cout<<"(For Customer)"<<endl;
+    cout<<"No. of items                 :  "<<item<<endl;
+    cout<<"Price per item               :  "<<pri<<endl;
+    cout<<"GST per item                 :  "<<gst<<endl;
+    tgst=item*5;
+    cout<<"Total GST                    :  "<<tgst<<endl;
+    pribdis=(item*pri)+tgst;
+    cout<<"Price before Discount        :  "<<pribdis<<endl;
+    tdis=(pri*dis*item)/100;
+    cout<<"Total Discount               :  "<<tdis<<endl;
+    cout<<"------------------------------"<<endl;
+    priadis=pribdis-tdis;
+    cout<<"Price after Discount         :  "<<priadis<<endl;
+    cout<<"CASH                         :  ";
+    cin>>cash;
+    change=cash-priadis;
+    cout<<"CHANGE                       :  "<<change<<endl;
+    cout<<"---------THANK YOU------------";
+    
+    
+    
+    
+     return 0;
+}
